@@ -47,14 +47,15 @@ python3Packages.buildPythonApplication rec {
       --replace "RustExtension(\"portmodlib.portmod\", binding=Binding.PyO3, strip=True)" ""
   '';
 
-  patches = [
-    (fetchpatch {
-      # fix error when symlinks are present in the path (https://gitlab.com/portmod/portmod/-/merge_requests/393)
-      # happen with ~/.nix-profile
-      url = "https://gitlab.com/portmod/portmod/-/merge_requests/393.patch";
-      sha256 = "sha256-XHifwD/Nh7UiMZdvSNudVF7qpBOpjGTKSr4VVdJqUdA=";
-    })
-  ];
+  # The below patch was merged and is no longer necessary for versions >= 2.1.0. 
+  #patches = [
+  #  (fetchpatch {
+  #    # fix error when symlinks are present in the path (https://gitlab.com/portmod/portmod/-/merge_requests/393)
+  #    # happen with ~/.nix-profile
+  #    url = "https://gitlab.com/portmod/portmod/-/merge_requests/393.patch";
+  #    sha256 = "1x6zh8vp53qqxg1y24kd1x4sj37dfbrn1iqrs9g1n2claq452x8x";
+  #  })
+  #];
 
   propagatedBuildInputs = with python3Packages; [
     setuptools-scm
