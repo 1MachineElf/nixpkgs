@@ -16,7 +16,7 @@ let
     inherit src version;
     pname = "portmod-rust";
 
-    cargoHash = "sha256-tAghZmlg34jHr8gtNgL3MQ8EI7K6/TfDcTbBjxdWLr0=";
+    cargoSha256 = "1cd8ycwh27ma9zmkcaw2xiv3v95qhdhs1nkmvq0qnjcnjhrcqiyw";
 
     nativeBuildInputs = [ python3Packages.python ];
 
