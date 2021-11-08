@@ -30,6 +30,7 @@ let
     tr-patcher
     tes3cmd
     imagemagick
+    p7zip
   ];
 
 in
