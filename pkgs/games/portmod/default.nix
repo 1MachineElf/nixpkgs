@@ -31,6 +31,7 @@ let
     tes3cmd
     imagemagick
     p7zip
+    unrar
   ];
 
 in
